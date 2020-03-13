@@ -1,15 +1,12 @@
-#include<iostream>
-using namespace std;
+    #include<iostream>
+    using namespace std;
 
-struct Node {
-	int data;
+    struct Node {
+ 	int data;
     Node* next;
-};
+    };
 
-/* Given a reference (pointer to pointer) to the head
-   of a list and an int, appends a new node at the end  */
-void pushElement(struct Node** head, char new_data)
-{
+    void pushElement(struct Node** head, char new_data) {
 	/* 1. allocate node */
 	struct Node* new_node = (struct Node*) malloc(sizeof(struct Node));
 
@@ -36,22 +33,22 @@ void pushElement(struct Node** head, char new_data)
 	/* 6. Change the next of last node */
 	last->next = new_node;
 	return;
-}
+        }
 
-void printList(struct Node* node)
-{
+    void printList(struct Node* node)
+    {
 	while (node != NULL)
 	{
 		cout << node->data;
 		node = node->next;	
 	}
-}
+    }
 	
-int main()	
-{
+    int main()	
+    {
 	char choice, userType;
 	int row, i=0;
-    Node* lists[1000] = { 0 };
+        Node* lists[1000] = { 0 };
 	cin >> row;
 	while (i < row) {
 		userType = getchar();
@@ -79,4 +76,4 @@ int main()
 		}
 	}
 	return 0;
-}
+    }
